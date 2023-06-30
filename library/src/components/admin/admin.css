@@ -1,0 +1,188 @@
+.adminForm > button{
+    border: 2px solid currentColor;
+    border-radius: 3rem;
+    color: #223E80;
+    font-size: 1.5rem;
+    font-weight: 100;
+    overflow: hidden;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    background-color: transparent;
+}
+.adminForm > button::after {
+    background-color: #20B283;
+    border-radius: 3rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+.adminForm > button:hover::after {
+    transform: translate(0, 0);
+}
+
+.adminForm > button:hover {
+    border: 2px solid transparent;
+    color: #223E80;
+    transform: scale(1.05);
+    will-change: transform;
+    cursor: pointer;
+}
+.librarian_update_form{
+    padding: 0 20px;
+}
+.librarian_update_form > form {
+    display: flex;
+    flex-direction: column;
+}
+.adminAuth{
+    padding:  0 10px;
+}
+.adminAuth_welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adminAuth_welcome > img{
+    object-fit: contain;
+    max-width: 200px;
+    width: 100%;
+}
+.adminAuth > form {
+    display: flex;
+    flex-direction: column;
+}
+.MuiFormControl-root{
+    margin: 5px 0 !important;
+}
+.adminLibrarian{
+    padding: 0 10px;
+}
+.adminLibrarian > form{
+    display: flex;
+    flex-direction: column;
+}
+
+.adminStudent > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:  0 10px;
+}
+.admin{
+    background-color: #D4F2FD;
+    margin: 20px 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.admin_dashboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.admin_dashboard_student{
+    margin: 5px 10px;
+    width: 100%;
+}
+.admin_dashboard_student > h2{
+    margin: 10px 0;
+}
+.admin_dashboard_librarian{
+    margin: 5px 10px;
+    width: 100%;
+}
+.admin_dashboard_librarian > h2{
+    margin: 10px 0;
+}
+.student_update_form{
+    padding: 0 10px;
+}
+.student_update_form > form{
+    display: flex;
+    flex-direction: column;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+
+.students_table{
+    max-height: 250px;
+    overflow: auto;
+}
+.librarian_table{
+    max-height: 250px;
+    overflow: auto;
+}
+
+.students_search,.librarian_search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 5px 0;
+}
+.students_search_input, .librarian_search_input{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 2px 5px;
+    border: solid 1px #223E80;
+    max-width: 300px;
+    width: 100%;
+}
+.students_search_input > input , .librarian_search_input > input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.admin_dashboard_student > .students,.librarians{
+    background-color: #ffff;
+    padding: 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,0.3);
+}
+
+  @media only screen and (max-width: 768px) {
+    .admin{
+        padding: 5px 5px;
+    }
+    /* .students,.librarians{
+        width: 290px;
+        overflow-x: scroll;
+    } */
+    .admin_dashboard{
+        flex-wrap: wrap;
+    }
+    .admin_dashboard_librarian{
+        margin: 5px 0;
+    }
+    .admin_dashboard_student{
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+}

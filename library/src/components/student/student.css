@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&family=Rancho&family=Righteous&family=Roboto&display=swap');
+
+.student_form> button{
+    border: 2px solid currentColor;
+    border-radius: 3rem;
+    color: #223E80;
+    font-size: 1.5rem;
+    font-weight: 100;
+    overflow: hidden;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    background-color: transparent;
+}
+.student_form> button::after {
+    background-color: #20B283;
+    border-radius: 3rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+.student_form> button:hover::after {
+    transform: translate(0, 0);
+}
+.student_form> button:hover {
+    border: 2px solid transparent;
+    color: #223E80;
+    transform: scale(1.05);
+    will-change: transform;
+    cursor: pointer;
+}
+.studentAuth{
+    padding:  0 20px;
+}
+.studentAuth_welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.studentAuth_welcome > img{
+    object-fit: contain;
+    max-width: 200px;
+    width: 100%;
+}
+.studentAuth > form {
+    display: flex;
+    flex-direction: column;
+}
+.MuiFormControl-root{
+    margin: 5px 0 !important;
+}
+.student_book_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #ffff;
+    padding: 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,0.3);
+    overflow: auto;
+    margin: 20px 20px;
+    max-height: 500px;
+}
+
+.books_search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+}
+.books_search_input{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 2px 5px;
+    border: solid 1px #223E80;
+    max-width: 300px;
+    width: 100%;
+}
+.books_search_input > input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.student_books{
+    flex: 0.5;
+}
+.student_books > .books{
+    max-height: 800px;
+}
+.student_issue{
+    flex: 0.5;
+}
+.student_issues{ 
+    background-color: #ffff;
+    padding: 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,0.3);
+    overflow: auto;
+    margin: 20px 20px;
+    max-height: 180px;
+}
+.student_issues > h2 {
+    margin: 5px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 768px){
+    .student_books > .books{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .student_book_list{
+        max-height: 400px;
+    }
+    .student_books > .books{
+        max-height: 900px;
+    }
+}
